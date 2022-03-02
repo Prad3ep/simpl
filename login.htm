@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log in</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		body{
+			background-image: url('blk.webp');
+			background-size: cover;
+			background-position: center center;
+			color: #fff;
+		}
+
+    .form1{
+      padding: 200px;
+          }
+	</style>
+</head>
+<body>
+
+
+<div class="wrapper">
+          <center>
+            <form class="form1" action="cht.html">
+                <div class="input nobottomborder">
+                    <div class="inputtext">
+                        Password:
+                    </div>
+
+                    <div class="inputcontent">
+                        <input type="password" id="password" /><br>
+                    </div>
+                </div>
+
+
+                <div class="buttons">
+                    <input class="orangebutton" type="button" value="Login" onclick="checkPassword()" onkeydown="javascript: return random_function(event)"/>
+                </div>
+            </form>
+            </center>
+        </div>
+
+       <script>
+        function random_function(evt){
+          var bool=true;
+          if(evt.keyCode==13){
+            bool=false;
+          }
+          return bool;
+        }
+      function checkPassword(){
+        
+       if(document.getElementById('password').value == 'hello'){
+        alert('Correct Password!'); 
+          location.href = "cht.html";
+         } else {
+         alert('Wrong Password!');
+          return false;
+        }
+       }
+      </script>
+
+</body>
+</html>
